@@ -95,30 +95,6 @@ html[data-theme="custom"] label[for] {
     pointer !important;
 }
 
-/* Notification bell -> the World Machine's lightbulb (bulb_anim_24.png is a
-   5x5 grid of 48px frames; we show the first, cleanest frame). */
-html[data-theme="custom"] button[aria-label="Notifications"] svg.fa-bell path,
-html[data-theme="custom"]
-  button[aria-label="Notifications"]
-  svg.fa-bell-slash
-  path {
-  fill: transparent !important;
-}
-
-html[data-theme="custom"] button[aria-label="Notifications"] svg.fa-bell,
-html[data-theme="custom"] button[aria-label="Notifications"] svg.fa-bell-slash {
-  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/niko_sleep.gif") !important;
-  transform: scale(2.5) !important;
-  background-size: 100% 100% !important;
-  background-position: 0% 0% !important;
-  background-repeat: no-repeat !important;
-  image-rendering: pixelated !important;
-}
-
-html[data-theme="custom"] button[aria-label="Notifications"] svg.fa-bell-slash {
-  opacity: 0.5 !important;
-}
-
 /* Nav-associated icons -> desktop_icons / achievements / minimap, applied
    site-wide by fa- class rather than scoped to the sidebar links, so the same
    glyph is reskinned everywhere it appears (e.g. a fa-users icon on a member
