@@ -18,3 +18,6 @@ raw.githubusercontent.com URLs.
 
 To change the wallpaper, modify the wallpaper variable at the top with one of
 the example keys given
+
+## Screenshot
+<img width="2752" height="1742" alt="image" src="https://github.com/user-attachments/assets/71497f7f-0c66-4163-9511-99206e7da46c" />
