@@ -1,9 +1,32 @@
 /* Wallpaper — set --wallpaper to the raw URL of any file in
-   assets/wallpapers/ to change the background image. Available options:
-   barrens, black, cafe, catwalks, courtyard, default, desktop, factory,
-   from_niko, glen, lamp, lamplighter, library, minecart, navigate, niko,
-   plant, planet, refuge, ruins, save_w32, secret, siblings, title, tower,
-   world_machine */
+   assets/wallpapers/ to change the background image. 
+   Available options:
+   - barrens 
+   - black
+   - cafe
+   - catwalks
+   - courtyard
+   - default
+   - desktop
+   - factory
+   - from_niko
+   - glen
+   - lamp
+   - lamplighter
+   - library
+   - minecart
+   - navigate
+   - niko
+   - plant
+   - planet
+   - refuge
+   - ruins
+   - save_w32
+   - secret
+   - siblings
+   - title
+   - tower
+   - world_machine */
 html[data-theme="custom"] {
   --wallpaper: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/wallpapers/default.png");
 
@@ -72,11 +95,7 @@ html[data-theme="custom"] img[src*="pluralspace_icon_beta"] {
   image-rendering: pixelated !important;
 }
 
-/* Cursor — cropped from the_world_machine/cursor.png (16x16 cells, row 1's
-   purple arrow/hand), then upscaled 2x with nearest-neighbor sampling to
-   stay crisp at a more visible size. Inlined as data URIs since an OS
-   cursor needs one exact frame, not the whole sheet — nothing to upload for
-   these two. */
+/*cursor from TWM Edition*/
 html[data-theme="custom"] {
   cursor:
     url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAgMAAAAOFJJnAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAMUExURQAAAHQgguvH8f///2eLtJgAAAABdFJOUwBA5thmAAAAAWJLR0QDEQxM8gAAAAd0SU1FB+oJCQ81AKJ+OjQAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjYtMDktMDlUMTU6NDM6NDErMDA6MDCEpjDbAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDI2LTA5LTA5VDE1OjQzOjQxKzAwOjAw9fuIZwAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wOS0wOVQxNTo1MzowMCswMDowMEFdczYAAABDSURBVBjTYwgFAQYggDOiVq1atRSDEYDOAMsQYGDqQjd5aRREDsEIYIXIwRmhYPUBSAwgYIVagmAANaAzWBnQGSQDALN8Nym08b3UAAAAAElFTkSuQmCC")
@@ -95,13 +114,7 @@ html[data-theme="custom"] label[for] {
     pointer !important;
 }
 
-/* Nav-associated icons -> desktop_icons / achievements / minimap, applied
-   site-wide by fa- class rather than scoped to the sidebar links, so the same
-   glyph is reskinned everywhere it appears (e.g. a fa-users icon on a member
-   card gets the contacts.png treatment too, not just the sidebar's). Journal
-   moved from doc.png to wallpapers_folder.png (a folder of scenery/memories
-   reads better for a long-form diary) so doc.png's literal "pages" glyph is
-   free for Notes. */
+/* Nav-associated icons -> desktop_icons */
 html[data-theme="custom"] svg.fa-grid path,
 html[data-theme="custom"] svg.fa-gear path,
 html[data-theme="custom"] svg.fa-users path,
@@ -202,15 +215,6 @@ html[data-theme="custom"] svg.fa-arrow-right-from-bracket {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/exit.png") !important;
 }
 
-/* Close buttons (drawers/modals) -> window_buttons.png's close glyph,
-   cropped to its 16x16 cell and upscaled 2x nearest-neighbor. The source
-   asset is an opaque white square with the X cut out as transparency (an
-   in-game window-chrome compositing trick), so it reads as a white square
-   button with a dark X once our (dark) surface color shows through the
-   hole — that's the intended look, not a bug. Inlined since it's a crop,
-   not a standalone file — nothing to upload. Scoped to aria-label="Close"
-   only: the same fa-xmark icon is reused for Cancel/Clear/Remove-member
-   buttons elsewhere, which keep the default look. */
 html[data-theme="custom"] button[aria-label="Close"] svg.fa-xmark path {
   fill: transparent !important;
 }
@@ -223,9 +227,6 @@ html[data-theme="custom"] button[aria-label="Close"] svg.fa-xmark {
   image-rendering: pixelated !important;
 }
 
-/* Patreon icon -> niko_stand.gif, applied site-wide by class since the
-   sidebar's footer link isn't the only place fa-patreon shows up (e.g. it
-   also appears without the aria-label="Patreon" wrapper elsewhere). */
 html[data-theme="custom"] svg.fa-patreon path {
   fill: transparent !important;
 }
