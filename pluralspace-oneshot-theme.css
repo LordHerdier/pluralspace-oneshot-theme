@@ -1,0 +1,256 @@
+html[data-theme="custom"] {
+  /* Surfaces & borders */
+  --color-bg: #000000 !important;
+  --color-bg-2: #0a0612 !important;
+  --color-surface: #0f0a1a !important;
+  --color-surface-2: #1a1029 !important; /* hover: variant-tinted, still dark */
+  --color-surface-3: #9664ff !important; /* pressed/active: solid accent fill */
+  --color-surface-4: #6442a5 !important; /* subtle emphasis: variant */
+  --color-surface-5: #4a3475 !important; /* muted foreground */
+  --color-surface-6: #362555 !important; /* placeholder tone */
+  --color-border: #9664ff !important;
+
+  /* Text */
+  --color-text-heading: #9664ff !important;
+  --color-text: #b9a3ff !important; /* lightened primary for body legibility */
+  --color-text-secondary: #9664ff !important;
+  --color-text-muted: #6442a5 !important;
+  --color-text-faint: #4a3475 !important;
+
+  /* Accent & brand */
+  --color-accent: #9664ff !important;
+  --color-accent-foreground: #000000 !important; /* black text/icons on accent fill */
+  --color-accent-content: #9664ff !important;
+  --color-primary: var(--color-accent) !important;
+
+  /* Status — pulled from OneShot's red/green/yellow theme accents */
+  --color-danger: #d5216a !important;
+  --color-success: #3fd564 !important;
+  --color-warning: #ffd26a !important;
+
+  /* Corner radius — OneShot's UI is flat pixel-art, square corner */
+  --radius-card: 0rem !important;
+  --radius-field: 0rem !important;
+  --radius-button: 0rem !important;
+  --radius-xs: 0 !important;
+  --radius-sm: 0 !important;
+  --radius-md: 0rem !important;
+  --radius-lg: 0rem !important;
+  --radius-xl: 0rem !important;
+  --radius-2xl: 0rem !important;
+  --radius-3xl: 0rem !important;
+  --radius-4xl: 0rem !important;
+
+  /* Fonts */
+  --font-sans:
+    "Terminus", "Courier New", monospace, "Apple Color EmojiI Symbol",
+    "Noto Color Emoji" !important;
+  --font-display:
+    "Terminus", "Courier New", monospace, "Apple Color Eme UI Symbol",
+    "Noto Color Emoji" !important;
+}
+
+/* Background image*/
+html[data-theme="custom"] body > div > div {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/default.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* Sidebar logo -> small_sun.png. */
+html[data-theme="custom"] img[src*="pluralspace_icon_beta"] {
+  content: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/small_sun.png") !important;
+  image-rendering: pixelated !important;
+}
+
+/* Cursor — cropped from the_world_machine/cursor.png (16x16 cells, row 1's
+   purple arrow/hand), then upscaled 2x with nearest-neighbor sampling to
+   stay crisp at a more visible size. Inlined as data URIs since an OS
+   cursor needs one exact frame, not the whole sheet — nothing to upload for
+   these two. */
+html[data-theme="custom"] {
+  cursor:
+    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAgMAAAAOFJJnAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAMUExURQAAAHQgguvH8f///2eLtJgAAAABdFJOUwBA5thmAAAAAWJLR0QDEQxM8gAAAAd0SU1FB+oJCQ81AKJ+OjQAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjYtMDktMDlUMTU6NDM6NDErMDA6MDCEpjDbAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDI2LTA5LTA5VDE1OjQzOjQxKzAwOjAw9fuIZwAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wOS0wOVQxNTo1MzowMCswMDowMEFdczYAAABDSURBVBjTYwgFAQYggDOiVq1atRSDEYDOAMsQYGDqQjd5aRREDsEIYIXIwRmhYPUBSAwgYIVagmAANaAzWBnQGSQDALN8Nym08b3UAAAAAElFTkSuQmCC")
+      4 2,
+    auto !important;
+}
+
+html[data-theme="custom"] a[href],
+html[data-theme="custom"] button:not(:disabled),
+html[data-theme="custom"] [role="button"],
+html[data-theme="custom"] .cursor-pointer,
+html[data-theme="custom"] label[for] {
+  cursor:
+    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAgMAAAAOFJJnAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAMUExURQAAAHQgguvH8f///2eLtJgAAAABdFJOUwBA5thmAAAAAWJLR0QDEQxM8gAAAAd0SU1FB+oJCQ81AKJ+OjQAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjYtMDktMDlUMTU6NDM6NDErMDA6MDCEpjDbAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDI2LTA5LTA5VDE1OjQzOjQxKzAwOjAw9fuIZwAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wOS0wOVQxNTo1MzowMCswMDowMEFdczYAAAA+SURBVBjTY2BgZYACOCMqgEqM0NBQNAYQBCAzWKNWrVqFwogihrEKncGKwWAIhVkKZwDllqIygHIBaAw0AACDijIV7+pnWgAAAABJRU5ErkJggg==")
+      12 2,
+    pointer !important;
+}
+
+/* Notification bell -> the World Machine's lightbulb (bulb_anim_24.png is a
+   5x5 grid of 48px frames; we show the first, cleanest frame). */
+html[data-theme="custom"] button[aria-label="Notifications"] svg.fa-bell path,
+html[data-theme="custom"]
+  button[aria-label="Notifications"]
+  svg.fa-bell-slash
+  path {
+  fill: transparent !important;
+}
+
+html[data-theme="custom"] button[aria-label="Notifications"] svg.fa-bell,
+html[data-theme="custom"] button[aria-label="Notifications"] svg.fa-bell-slash {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/niko_sleep.gif") !important;
+  transform: scale(2.5) !important;
+  background-size: 100% 100% !important;
+  background-position: 0% 0% !important;
+  background-repeat: no-repeat !important;
+  image-rendering: pixelated !important;
+}
+
+html[data-theme="custom"] button[aria-label="Notifications"] svg.fa-bell-slash {
+  opacity: 0.5 !important;
+}
+
+/* Nav-associated icons -> desktop_icons / achievements / minimap, applied
+   site-wide by fa- class rather than scoped to the sidebar links, so the same
+   glyph is reskinned everywhere it appears (e.g. a fa-users icon on a member
+   card gets the contacts.png treatment too, not just the sidebar's). Journal
+   moved from doc.png to wallpapers_folder.png (a folder of scenery/memories
+   reads better for a long-form diary) so doc.png's literal "pages" glyph is
+   free for Notes. */
+html[data-theme="custom"] svg.fa-grid path,
+html[data-theme="custom"] svg.fa-gear path,
+html[data-theme="custom"] svg.fa-users path,
+html[data-theme="custom"] svg.fa-book-open path,
+html[data-theme="custom"] svg.fa-chart-column path,
+html[data-theme="custom"] svg.fa-calendar path,
+html[data-theme="custom"] svg.fa-map path,
+html[data-theme="custom"] svg.fa-map-location-dot path,
+html[data-theme="custom"] svg.fa-note path,
+html[data-theme="custom"] svg.fa-comments path,
+html[data-theme="custom"] svg.fa-square-check path,
+html[data-theme="custom"] svg.fa-clock path,
+html[data-theme="custom"] svg.fa-palette path,
+html[data-theme="custom"] svg.fa-globe path,
+html[data-theme="custom"] svg.fa-arrow-right-from-bracket path {
+  fill: transparent !important;
+}
+
+html[data-theme="custom"] svg.fa-grid,
+html[data-theme="custom"] svg.fa-gear,
+html[data-theme="custom"] svg.fa-users,
+html[data-theme="custom"] svg.fa-book-open,
+html[data-theme="custom"] svg.fa-chart-column,
+html[data-theme="custom"] svg.fa-calendar,
+html[data-theme="custom"] svg.fa-map,
+html[data-theme="custom"] svg.fa-map-location-dot,
+html[data-theme="custom"] svg.fa-note,
+html[data-theme="custom"] svg.fa-comments,
+html[data-theme="custom"] svg.fa-square-check,
+html[data-theme="custom"] svg.fa-clock,
+html[data-theme="custom"] svg.fa-palette,
+html[data-theme="custom"] svg.fa-globe,
+html[data-theme="custom"] svg.fa-arrow-right-from-bracket {
+  width: 1.25em !important;
+  height: 1.25em !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  image-rendering: pixelated !important;
+}
+
+html[data-theme="custom"] svg.fa-grid {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/oneshot.png") !important;
+}
+html[data-theme="custom"] svg.fa-gear {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/customize.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-users {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/contacts.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-book-open {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/wallpapers_folder.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-chart-column {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/jukebox.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-calendar {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/gallery.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-map {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/wallpapers_folder.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-map-location-dot {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/controls.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-note {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/doc.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-comments {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/clover.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-square-check {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/achievements.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-clock {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/timer.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-palette {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/theme.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-globe {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/oneshot.png") !important;
+}
+
+html[data-theme="custom"] svg.fa-arrow-right-from-bracket {
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/exit.png") !important;
+}
+
+/* Close buttons (drawers/modals) -> window_buttons.png's close glyph,
+   cropped to its 16x16 cell and upscaled 2x nearest-neighbor. The source
+   asset is an opaque white square with the X cut out as transparency (an
+   in-game window-chrome compositing trick), so it reads as a white square
+   button with a dark X once our (dark) surface color shows through the
+   hole — that's the intended look, not a bug. Inlined since it's a crop,
+   not a standalone file — nothing to upload. Scoped to aria-label="Close"
+   only: the same fa-xmark icon is reused for Cancel/Clear/Remove-member
+   buttons elsewhere, which keep the default look. */
+html[data-theme="custom"] button[aria-label="Close"] svg.fa-xmark path {
+  fill: transparent !important;
+}
+
+html[data-theme="custom"] button[aria-label="Close"] svg.fa-xmark {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACdFJOUwAAdpPNOAAAAAJiS0dEAAHdihOkAAAAB3RJTUUH6gkJDzYovObBDQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyNi0wOS0wOVQxNTo1NDo0MCswMDowMAGD/9YAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjYtMDktMDlUMTU6NTQ6NDArMDA6MDBw3kdqAAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDI2LTA5LTA5VDE1OjU0OjQwKzAwOjAwJ8tmtQAAAGhJREFUOMutk1EOgDAIQ4vx/leuH4uOCZEuyN8YfaEbGPEdR3GPEzAAGWfkFcKoZqKXejA+1Qx6yoQ3w59UgletNJ0wna+OdgiT4XMloV/wo4vuS3Z/sztRUe8Z6l7EzbrJe/OQRUm4AKngIi/iKVsBAAAAAElFTkSuQmCC") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  image-rendering: pixelated !important;
+}
+
+/* Patreon icon -> niko_stand.gif, applied site-wide by class since the
+   sidebar's footer link isn't the only place fa-patreon shows up (e.g. it
+   also appears without the aria-label="Patreon" wrapper elsewhere). */
+html[data-theme="custom"] svg.fa-patreon path {
+  fill: transparent !important;
+}
+
+html[data-theme="custom"] svg.fa-patreon {
+  transform: scale(2.5) !important;
+  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/niko_stand.gif") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  image-rendering: pixelated !important;
+}
