@@ -114,40 +114,45 @@ html[data-theme="custom"] label[for] {
     pointer !important;
 }
 
-/* Nav-associated icons -> desktop_icons */
-html[data-theme="custom"] svg.fa-grid path,
-html[data-theme="custom"] svg.fa-gear path,
-html[data-theme="custom"] svg.fa-users path,
-html[data-theme="custom"] svg.fa-book-open path,
-html[data-theme="custom"] svg.fa-chart-column path,
-html[data-theme="custom"] svg.fa-calendar path,
-html[data-theme="custom"] svg.fa-map path,
-html[data-theme="custom"] svg.fa-map-location-dot path,
-html[data-theme="custom"] svg.fa-note path,
-html[data-theme="custom"] svg.fa-comments path,
-html[data-theme="custom"] svg.fa-square-check path,
-html[data-theme="custom"] svg.fa-clock path,
-html[data-theme="custom"] svg.fa-palette path,
-html[data-theme="custom"] svg.fa-globe path,
-html[data-theme="custom"] svg.fa-arrow-right-from-bracket path {
+/* Nav-associated icons -> desktop_icons. Scoped to the sidebar's <nav>
+   elements and the account dropdown menu ([role="menu"]) */
+html[data-theme="custom"] aside nav svg.fa-grid path,
+html[data-theme="custom"] aside nav svg.fa-gear path,
+html[data-theme="custom"] [role="menu"] svg.fa-gear path,
+html[data-theme="custom"] aside nav svg.fa-users path,
+html[data-theme="custom"] aside nav svg.fa-book-open path,
+html[data-theme="custom"] aside nav svg.fa-chart-column path,
+html[data-theme="custom"] aside nav svg.fa-calendar path,
+html[data-theme="custom"] aside nav svg.fa-map path,
+html[data-theme="custom"] aside nav svg.fa-map-location-dot path,
+html[data-theme="custom"] aside nav svg.fa-note path,
+html[data-theme="custom"] aside nav svg.fa-comments path,
+html[data-theme="custom"] aside nav svg.fa-square-check path,
+html[data-theme="custom"] aside nav svg.fa-clock path,
+html[data-theme="custom"] [role="menu"] svg.fa-palette path,
+html[data-theme="custom"] button[aria-label="Appearance"] svg.fa-palette path,
+html[data-theme="custom"] [role="menu"] svg.fa-globe path,
+html[data-theme="custom"] [role="menu"] svg.fa-arrow-right-from-bracket path {
   fill: transparent !important;
 }
 
-html[data-theme="custom"] svg.fa-grid,
-html[data-theme="custom"] svg.fa-gear,
-html[data-theme="custom"] svg.fa-users,
-html[data-theme="custom"] svg.fa-book-open,
-html[data-theme="custom"] svg.fa-chart-column,
-html[data-theme="custom"] svg.fa-calendar,
-html[data-theme="custom"] svg.fa-map,
-html[data-theme="custom"] svg.fa-map-location-dot,
-html[data-theme="custom"] svg.fa-note,
-html[data-theme="custom"] svg.fa-comments,
-html[data-theme="custom"] svg.fa-square-check,
-html[data-theme="custom"] svg.fa-clock,
-html[data-theme="custom"] svg.fa-palette,
-html[data-theme="custom"] svg.fa-globe,
-html[data-theme="custom"] svg.fa-arrow-right-from-bracket {
+html[data-theme="custom"] aside nav svg.fa-grid,
+html[data-theme="custom"] aside nav svg.fa-gear,
+html[data-theme="custom"] [role="menu"] svg.fa-gear,
+html[data-theme="custom"] aside nav svg.fa-users,
+html[data-theme="custom"] aside nav svg.fa-book-open,
+html[data-theme="custom"] aside nav svg.fa-chart-column,
+html[data-theme="custom"] aside nav svg.fa-calendar,
+html[data-theme="custom"] aside nav svg.fa-map,
+html[data-theme="custom"] aside nav svg.fa-map-location-dot,
+html[data-theme="custom"] aside nav svg.fa-note,
+html[data-theme="custom"] aside nav svg.fa-comments,
+html[data-theme="custom"] aside nav svg.fa-square-check,
+html[data-theme="custom"] aside nav svg.fa-clock,
+html[data-theme="custom"] [role="menu"] svg.fa-palette,
+html[data-theme="custom"] button[aria-label="Appearance"] svg.fa-palette,
+html[data-theme="custom"] [role="menu"] svg.fa-globe,
+html[data-theme="custom"] [role="menu"] svg.fa-arrow-right-from-bracket {
   width: 1.25em !important;
   height: 1.25em !important;
   background-repeat: no-repeat !important;
@@ -156,62 +161,64 @@ html[data-theme="custom"] svg.fa-arrow-right-from-bracket {
   image-rendering: pixelated !important;
 }
 
-html[data-theme="custom"] svg.fa-grid {
+html[data-theme="custom"] aside nav svg.fa-grid {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/oneshot.png") !important;
 }
-html[data-theme="custom"] svg.fa-gear {
+html[data-theme="custom"] aside nav svg.fa-gear,
+html[data-theme="custom"] [role="menu"] svg.fa-gear {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/customize.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-users {
+html[data-theme="custom"] aside nav svg.fa-users {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/contacts.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-book-open {
+html[data-theme="custom"] aside nav svg.fa-book-open {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/wallpapers_folder.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-chart-column {
+html[data-theme="custom"] aside nav svg.fa-chart-column {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/jukebox.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-calendar {
+html[data-theme="custom"] aside nav svg.fa-calendar {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/gallery.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-map {
+html[data-theme="custom"] aside nav svg.fa-map {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/wallpapers_folder.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-map-location-dot {
+html[data-theme="custom"] aside nav svg.fa-map-location-dot {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/controls.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-note {
+html[data-theme="custom"] aside nav svg.fa-note {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/doc.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-comments {
+html[data-theme="custom"] aside nav svg.fa-comments {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/clover.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-square-check {
+html[data-theme="custom"] aside nav svg.fa-square-check {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/achievements.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-clock {
+html[data-theme="custom"] aside nav svg.fa-clock {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/timer.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-palette {
+html[data-theme="custom"] [role="menu"] svg.fa-palette,
+html[data-theme="custom"] button[aria-label="Appearance"] svg.fa-palette {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/theme.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-globe {
+html[data-theme="custom"] [role="menu"] svg.fa-globe {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/oneshot.png") !important;
 }
 
-html[data-theme="custom"] svg.fa-arrow-right-from-bracket {
+html[data-theme="custom"] [role="menu"] svg.fa-arrow-right-from-bracket {
   background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/exit.png") !important;
 }
 
