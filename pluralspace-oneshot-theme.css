@@ -28,7 +28,7 @@
    - tower
    - world_machine */
 html[data-theme="custom"] {
-  --wallpaper: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/wallpapers/default.png");
+  --wallpaper: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/wallpapers/catwalks.png");
 
   /* Surfaces & borders */
   --color-bg: #000000 !important;
