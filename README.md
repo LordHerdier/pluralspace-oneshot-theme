@@ -1,6 +1,6 @@
 # pluralspace-oneshot-theme
 
-An OneShot-inspired custom theme for pluralspace.app, used via its custom CSS
+An OneShot-inspired custom theme for pluralspace.app, used via a custom CSS injector, like stylus
 setting.
 
 ## Usage
