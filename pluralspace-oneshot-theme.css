@@ -1,4 +1,12 @@
+/* Wallpaper — set --wallpaper to the raw URL of any file in
+   assets/wallpapers/ to change the background image. Available options:
+   barrens, black, cafe, catwalks, courtyard, default, desktop, factory,
+   from_niko, glen, lamp, lamplighter, library, minecart, navigate, niko,
+   plant, planet, refuge, ruins, save_w32, secret, siblings, title, tower,
+   world_machine */
 html[data-theme="custom"] {
+  --wallpaper: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/wallpapers/default.png");
+
   /* Surfaces & borders */
   --color-bg: #000000 !important;
   --color-bg-2: #0a0612 !important;
@@ -52,7 +60,7 @@ html[data-theme="custom"] {
 
 /* Background image*/
 html[data-theme="custom"] body > div > div {
-  background-image: url("https://raw.githubusercontent.com/LordHerdier/pluralspace-oneshot-theme/main/assets/default.png") !important;
+  background-image: var(--wallpaper) !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   background-position: center !important;
